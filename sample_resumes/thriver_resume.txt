@@ -1,0 +1,32 @@
+Software Engineer - Fast-Paced Development
+
+Summary:
+Results-driven software engineer with 5 years of experience delivering high-quality solutions under tight deadlines. Thrives in fast-paced, dynamic environments with rapidly changing requirements.
+
+Professional Experience:
+
+Software Engineer, E-commercePlatform (2021-Present)
+- Shipped critical security patch in 36 hours during production incident affecting 50K users
+- Delivered MVP for new payment feature in 2 weeks with 5 requirement pivots mid-development
+- Handled Black Friday traffic spike (10x normal volume) with zero downtime
+- Rapidly onboarded to failing project with 1 week to deadline, identified bottlenecks, shipped on time
+- Adapted to 3 technology stack changes within 6 months (React → Vue → React Native)
+- Delivered emergency hotfix for payment processing bug in 4 hours
+
+Software Engineer, StartupABC (2019-2021)
+- Joined project mid-sprint, quickly understood codebase, delivered feature on deadline
+- Handled 3 simultaneous production incidents, prioritized and resolved all within SLA
+- Pivoted entire feature implementation 2 days before release due to business requirement change
+- Worked 80-hour weeks during critical product launch, maintained code quality standards
+- Rapidly learned new framework (Django) and delivered production feature in 1 week
+
+Junior Developer, Agency123 (2017-2019)
+- Delivered client projects with aggressive timelines (2-week sprints)
+- Adapted to 5 different client tech stacks within first year
+- Handled urgent client requests and last-minute changes
+
+Technical Skills:
+Python, JavaScript, React, Node.js, Django, FastAPI, AWS, Docker, Git, Problem Solving, Rapid Learning, Stress Management
+
+Education:
+BS Computer Science, State College (2017)

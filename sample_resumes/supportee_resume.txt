@@ -1,0 +1,36 @@
+Software Engineer - Reliability & Quality
+
+Summary:
+Detail-oriented software engineer with 8 years of experience maintaining critical systems and ensuring operational excellence. Specializes in reliability, documentation, and establishing quality standards.
+
+Professional Experience:
+
+Senior Software Engineer, FinancialServices (2019-Present)
+- Maintained payment processing system with 99.99% uptime over 4 years
+- Documented comprehensive runbooks for 75+ operational scenarios
+- Established monitoring and alerting standards reducing incident response time by 50%
+- Implemented test suite achieving 95% code coverage across 200+ services
+- Conducted thorough code reviews ensuring zero critical bugs in production
+- Created technical documentation for 30+ APIs used by 15 internal teams
+- Standardized deployment procedures reducing deployment errors by 65%
+- Ensured compliance with security and regulatory requirements (SOC2, PCI-DSS)
+
+Software Engineer, EnterpriseTech (2016-2019)
+- Maintained legacy monolith system (3 years) with zero critical production incidents
+- Documented all system components, dependencies, and operational procedures
+- Established quality gates in CI/CD pipeline preventing 200+ potential bugs
+- Created comprehensive test documentation and testing guidelines
+- Implemented logging and monitoring infrastructure for better observability
+- Maintained database schemas and migration scripts with full documentation
+
+Junior Developer, SoftwareCorp (2014-2016)
+- Wrote unit tests and integration tests for existing codebase
+- Documented code and created user guides
+- Performed QA testing and bug fixes
+- Maintained code quality standards
+
+Technical Skills:
+Java, Python, SQL, PostgreSQL, Jenkins, Prometheus, Grafana, JUnit, Selenium, Documentation, Testing, Quality Assurance, System Reliability
+
+Education:
+BS Computer Science, University (2014)

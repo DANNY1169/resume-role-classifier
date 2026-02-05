@@ -1,0 +1,32 @@
+Senior Software Engineer - Platform & Infrastructure
+
+Summary:
+Strategic software engineer with 7 years of experience architecting scalable systems and driving technical vision. Specializes in building foundational infrastructure that enables organizational growth.
+
+Professional Experience:
+
+Principal Software Engineer, CloudScale Inc. (2021-Present)
+- Architected microservices platform serving 50 million daily active users
+- Established technical standards and architectural patterns adopted across 8 engineering teams
+- Designed event-driven infrastructure using Kafka, reducing system latency by 70%
+- Led strategic technology decisions including migration to Kubernetes and service mesh adoption
+- Built internal developer platform reducing deployment time from 2 hours to 5 minutes
+- Created framework for distributed tracing adopted company-wide
+
+Senior Software Engineer, TechStartup (2018-2021)
+- Designed and implemented distributed caching layer handling 100M+ requests/day
+- Pioneered adoption of GraphQL API architecture replacing REST endpoints
+- Built CI/CD pipeline infrastructure supporting 200+ microservices
+- Established code review standards and technical documentation practices
+- Led architecture reviews and technical design discussions
+
+Software Engineer, EnterpriseCorp (2016-2018)
+- Developed core payment processing system from scratch
+- Designed database schema and API contracts for financial services
+- Implemented monitoring and alerting infrastructure
+
+Technical Skills:
+Python, Java, Go, Kubernetes, Docker, AWS, Kafka, Redis, PostgreSQL, GraphQL, Microservices Architecture, System Design, Distributed Systems
+
+Education:
+BS Computer Science, State University (2016)

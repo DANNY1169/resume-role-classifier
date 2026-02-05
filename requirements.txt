@@ -1,0 +1,19 @@
+# RoleColorAI - Required Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core NLP and ML libraries
+numpy>=1.24.0
+scikit-learn>=1.3.0
+sentence-transformers>=2.2.0
+
+# Optional: For LLM-based summary generation
+openai>=1.0.0
+
+# Optional: For loading .env files
+python-dotenv>=1.0.0
+
+# Standard library dependencies (included in Python)
+# - json
+# - typing
+# - dataclasses
+# - re

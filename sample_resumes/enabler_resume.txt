@@ -1,0 +1,13 @@
+Name: Alex Jordan
+Title: Senior Technical Coordinator
+
+Summary:
+A strategic professional focused on establishing foundational processes. expert in architecting communication workflows and driving the vision for internal consistency.
+
+Experience:
+Architected a comprehensive meeting schedule to bridge the gap between the marketing and engineering teams, ensuring 100% attendance.
+Established the vision for the company's file storage hierarchy, creating a strategy that allows for easy retrieval of historical documents.
+Spearheaded the "Friday Wins" initiative, designing a social framework where team members share shout-outs to boost morale.
+Built detailed meeting minutes and roadmaps for the monthly book club to ensure inclusive participation.
+Designed a robust holiday coverage plan, executing a strategy that ensured no support tickets went unanswered during breaks.
+Launched a new Slack channel organization system to facilitate better cross-departmental dialogue.

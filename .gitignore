@@ -45,7 +45,6 @@ models/
 .env
 *.key
 secrets.txt
-*.txt
 
 # OS
 .DS_Store
