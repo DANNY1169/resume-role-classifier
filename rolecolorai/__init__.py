@@ -6,7 +6,6 @@ and generating role-aligned summaries.
 """
 
 __version__ = "1.0.0"
-__author__ = "RoleColorAI Team"
 
 from .config import ROLE_DEFINITIONS, FEW_SHOT_EXAMPLES
 from .scorer import SemanticRoleScorer

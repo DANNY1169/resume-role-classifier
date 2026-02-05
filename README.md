@@ -344,21 +344,5 @@ python -m rolecolorai.cli sample_resumes/supportee_resume.txt
 
 - PDF/Word resume parsing
 - Multi-role classification (candidates can be 60% Builder, 40% Enabler)
-- Fine-tuned model on labeled resume dataset
 - Batch processing API
-- Web interface
-- Confidence threshold tuning
-
----
-
-## 📄 License
-
-This project is created for the RoleColorAI take-home assignment.
-
----
-
-## 👤 Author
-
-Created for RoleColorAI AI Engineer position application.
-
-**Submission Date:** February 2025
+- Dockerization for production microservice deployment

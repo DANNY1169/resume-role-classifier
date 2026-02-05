@@ -169,15 +169,16 @@ Return a JSON object with this exact structure:
 }}
 
 CRITICAL REQUIREMENTS:
-1. Write a **cohesive, flowing paragraph** - NOT a list of bullet points or separate sentences
-2. Use natural transitions between sentences (e.g., "Leveraging...", "Through...", "Additionally...")
-3. Integrate skills naturally into sentences rather than listing them separately (e.g., "Building scalable APIs with Python and AWS" NOT "Skills: Python, AWS")
-4. Use {dominant_role}-specific language from the role definition above
-5. Include 1-2 quantified achievements if available in the experience
-6. Professional, confident tone - avoid jargon
-7. Based ONLY on provided information (no hallucination)
-8. The summary should read like a narrative paragraph, not a resume bullet list
-9. Return valid JSON only"""
+1. Write in **FIRST PERSON** (use "I" or action verbs without pronouns) - this is a resume, the candidate wrote it themselves
+2. Write a **cohesive, flowing paragraph** - NOT a list of bullet points or separate sentences
+3. Use natural transitions between sentences (e.g., "Leveraging...", "Through...", "Additionally...")
+4. Integrate skills naturally into sentences rather than listing them separately (e.g., "Building scalable APIs with Python and AWS" NOT "Skills: Python, AWS")
+5. Use {dominant_role}-specific language from the role definition above
+6. Include 1-2 quantified achievements if available in the experience
+7. Professional, confident tone - avoid jargon and phrases like "This professional is recognized for..." (sounds like someone else wrote it)
+8. Based ONLY on provided information (no hallucination)
+9. The summary should read like the candidate wrote it themselves, not like a third-party description
+10. Return valid JSON only"""
 
         try:
             response = self.client.chat.completions.create(
@@ -234,58 +235,62 @@ CRITICAL REQUIREMENTS:
         # Get skills text for natural integration
         skills_text = ', '.join(metadata['skills'][:3]) if metadata['skills'] else "modern technologies"
         years_text = metadata['years']
-        # Fix "experienced years" redundancy
-        if years_text == 'experienced':
+        # Fix awkward phrasing
+        if years_text == 'experienced' or years_text == 'extensive':
             years_text = 'extensive'
+            years_prefix = "with extensive experience"
+        else:
+            years_prefix = f"with {years_text} years of experience"
         title_text = metadata['title']
         
-        # Predefined templates - written as flowing paragraphs, not bullet points
+        # Predefined templates - written in first person, natural resume style
         if dominant_role == 'Builder':
             summary = (
-                f"An experienced {title_text} with {years_text} years of expertise, specifically focused on "
-                f"architecting scalable systems and driving technical vision. "
-                f"Leveraging a strong background in {skills_text}, this professional excels at transforming "
-                f"abstract concepts into foundational infrastructure that supports organizational growth. "
-                f"They have a proven track record of designing long-term solutions and building frameworks "
-                f"that scale with evolving business needs, consistently delivering innovative approaches "
-                f"to complex technical challenges."
+                f"Experienced {title_text} {years_prefix} in architecting scalable systems "
+                f"and driving technical vision. "
+                f"Leverage a strong background in {skills_text} to transform abstract concepts into foundational "
+                f"infrastructure that supports organizational growth. "
+                f"Have a proven track record of designing long-term solutions and building frameworks that scale "
+                f"with evolving business needs, consistently delivering innovative approaches to complex technical challenges."
             )
         elif dominant_role == 'Enabler':
+            # Handle case where title might be generic
+            title_display = title_text if title_text and title_text != 'professional' else "Professional"
             summary = (
-                f"A {title_text} with {years_text} years of experience, skilled in cross-functional collaboration "
-                f"and bridging gaps between technical and business stakeholders. "
-                f"Using expertise in {skills_text}, they excel at coordinating complex initiatives across "
-                f"multiple teams and unblocking critical paths to deliver measurable results. "
-                f"This professional is recognized for facilitating seamless collaboration and enabling "
-                f"high-performing teams through effective communication and strategic execution."
+                f"{title_display} {years_prefix} in cross-functional collaboration and "
+                f"bridging gaps between technical and business stakeholders. "
+                f"Use expertise in {skills_text} to coordinate complex initiatives across multiple teams and "
+                f"unblock critical paths, delivering measurable results. "
+                f"Facilitate seamless collaboration and enable high-performing teams through effective communication "
+                f"and strategic execution."
             )
         elif dominant_role == 'Thriver':
             summary = (
-                f"A {title_text} with {years_text} years of experience, thriving in fast-paced, dynamic environments "
+                f"{title_text} {years_prefix} thriving in fast-paced, dynamic environments "
                 f"where rapid adaptation is essential. "
-                f"Leveraging technical expertise in {skills_text}, they specialize in rapid iteration and "
-                f"shipping high-quality solutions under tight deadlines while maintaining delivery standards. "
-                f"This professional is known for delivering exceptional results even under pressure and uncertainty, "
-                f"consistently demonstrating the ability to pivot quickly and adapt to changing requirements."
+                f"Leverage technical expertise in {skills_text} to rapidly iterate and ship high-quality solutions "
+                f"under tight deadlines while maintaining delivery standards. "
+                f"Deliver exceptional results even under pressure and uncertainty, consistently demonstrating "
+                f"the ability to pivot quickly and adapt to changing requirements."
             )
         elif dominant_role == 'Supportee':
             summary = (
-                f"A {title_text} with {years_text} years of experience, focused on reliability and operational excellence "
+                f"{title_text} {years_prefix} focused on reliability and operational excellence "
                 f"through rigorous processes and attention to detail. "
-                f"With deep expertise in {skills_text}, they excel at maintaining critical systems and ensuring "
-                f"consistent quality through comprehensive documentation and standardized procedures. "
-                f"This professional is recognized for their commitment to operational excellence and proven track record "
-                f"of implementing standards that reduce risk and improve system stability."
+                f"Apply deep expertise in {skills_text} to maintain critical systems and ensure consistent quality "
+                f"through comprehensive documentation and standardized procedures. "
+                f"Committed to operational excellence with a proven track record of implementing standards that "
+                f"reduce risk and improve system stability."
             )
         else:
-            # Dynamic template generation for new roles - flowing paragraph style
+            # Dynamic template generation for new roles - first person resume style
             role_definition = ROLE_DEFINITIONS.get(dominant_role, "")
             summary = (
-                f"An experienced {title_text} with {years_text} years of expertise, demonstrating strong alignment "
-                f"with {dominant_role} principles through their professional work. "
-                f"Leveraging skills in {skills_text}, they apply {dominant_role.lower()} approaches to deliver "
-                f"consistent value in their domain. "
-                f"This professional is recognized for their contributions and commitment to excellence."
+                f"Experienced {title_text} {years_prefix}, demonstrating strong alignment "
+                f"with {dominant_role} principles through professional work. "
+                f"Leverage skills in {skills_text} to apply {dominant_role.lower()} approaches and deliver "
+                f"consistent value. "
+                f"Committed to excellence with a track record of meaningful contributions."
             )
         
         return {
